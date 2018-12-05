@@ -6,7 +6,13 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import org.springframework.retry.policy.SimpleRetryPolicy;
+import org.springframework.retry.policy.TimeoutRetryPolicy;
+import org.springframework.retry.support.RetryTemplate;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.Collections;
 
 /**
  * <p>@filename UserConsumerApplication</p>
@@ -25,7 +31,11 @@ public class UserConsumerApplication {
     @Bean
     @LoadBalanced
     public RestTemplate restTemplate(){
-        return new RestTemplate();
+        //超时重试：配置restTemplate超时，ribbon的超时参数配置后并不生效
+        SimpleClientHttpRequestFactory simpleClientHttpRequestFactory = new SimpleClientHttpRequestFactory();
+        //simpleClientHttpRequestFactory.setReadTimeout(1000);
+        //simpleClientHttpRequestFactory.setConnectTimeout(1000);
+        return new RestTemplate(simpleClientHttpRequestFactory);
     }
 
     public static void main(String[] args) {

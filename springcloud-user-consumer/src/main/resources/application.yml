@@ -22,10 +22,10 @@ logging:
 user-service:
   ribbon:
     #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule  #RoundRobinRule 默认为轮询
-    ConnectTimeout: 250 #ribbon的连接超时时间
-    ReadTimeout: 250 #ribbon数据读取时间
+    ConnectTimeout: 250 #ribbon的连接超时时间  没效果
+    ReadTimeout: 250 #ribbon数据读取时间      没效果
     OkToRetryOnAllOperations: true #是否所有操作都进行重试
-    MaxAutoRetriesNextServer: 1 #切换实例的重试次数
+    MaxAutoRetriesNextServer: 2 #切换实例的重试次数
     MaxAutoRetries: 1 #对当前实例的重试次数
 hystrix:
   command:

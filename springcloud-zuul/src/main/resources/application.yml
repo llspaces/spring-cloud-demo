@@ -1,0 +1,42 @@
+server:
+  port: 18086
+spring:
+  application:
+    name: zuul-api-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:18080/eureka,http://127.0.0.1:18081/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 30 #默认90s
+    lease-renewal-interval-in-seconds: 10 #默认30s
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true  #配置服务的Host为ip
+    ip-address: 192.168.11.74 #配置服务的ip（不配置为自动获取）
+zuul:
+  #routes:
+    #user-service:
+      #path: /user-service/**
+      #url: http://127.0.0.1:18082/user-service
+      #serviceId: user-service
+  retryable: true
+  routes:
+    user-service:
+      path: /user-service/**
+  prefix: /api
+ribbon:
+  ConnectTimeout: 250 # 连接超时时间(ms)
+  ReadTimeout: 1000 # 通信超时时间(ms)
+  OkToRetryOnAllOperations: true # 是否对所有操作重试
+  MaxAutoRetriesNextServer: 2 # 同一服务不同实例的重试次数
+  MaxAutoRetries: 1 # 同一实例的重试次数
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000 # 熔断超时时长：6000ms
+logging:
+  level:
+    org.springframework: debug

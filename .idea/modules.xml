@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/httpclient-demo/httpclient-demo.iml" filepath="$PROJECT_DIR$/httpclient-demo/httpclient-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-demo/springboot-demo.iml" filepath="$PROJECT_DIR$/springboot-demo/springboot-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-user-consumer/springboot-user-consumer.iml" filepath="$PROJECT_DIR$/springboot-user-consumer/springboot-user-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-user-service/springboot-user-service.iml" filepath="$PROJECT_DIR$/springboot-user-service/springboot-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-eureka-server1/springcloud-eureka-server1.iml" filepath="$PROJECT_DIR$/springcloud-eureka-server1/springcloud-eureka-server1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-eureka-server2/springcloud-eureka-server2.iml" filepath="$PROJECT_DIR$/springcloud-eureka-server2/springcloud-eureka-server2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-feign-user-consumer/springcloud-feign-user-consumer.iml" filepath="$PROJECT_DIR$/springcloud-feign-user-consumer/springcloud-feign-user-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-user-consumer/springcloud-user-consumer.iml" filepath="$PROJECT_DIR$/springcloud-user-consumer/springcloud-user-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-user-service1/springcloud-user-service1.iml" filepath="$PROJECT_DIR$/springcloud-user-service1/springcloud-user-service1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-user-service2/springcloud-user-service2.iml" filepath="$PROJECT_DIR$/springcloud-user-service2/springcloud-user-service2.iml" />
+    </modules>
+  </component>
+</project>

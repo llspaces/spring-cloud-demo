@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="httpclient-demo" />
+        <module name="springboot-demo" />
+        <module name="springboot-user-consumer" />
+        <module name="springboot-user-service" />
+        <module name="springcloud-eureka-server" />
+        <module name="springcloud-eureka-server1" />
+        <module name="springcloud-eureka-server2" />
+        <module name="springcloud-feign-user-consumer" />
+        <module name="springcloud-user-consumer" />
+        <module name="springcloud-user-service1" />
+        <module name="springcloud-user-service2" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="httpclient-demo" target="1.8" />
+      <module name="springboot-demo" target="1.8" />
+      <module name="springboot-user-consumer" target="1.8" />
+      <module name="springboot-user-service" target="1.8" />
+      <module name="springcloud-eureka-server" target="1.8" />
+      <module name="springcloud-eureka-server1" target="1.8" />
+      <module name="springcloud-eureka-server2" target="1.8" />
+      <module name="springcloud-eurekaserver" target="1.8" />
+      <module name="springcloud-feign-user-consumer" target="1.8" />
+      <module name="springcloud-user-consumer" target="1.8" />
+      <module name="springcloud-user-service" target="1.8" />
+      <module name="springcloud-user-service1" target="1.8" />
+      <module name="springcloud-user-service2" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

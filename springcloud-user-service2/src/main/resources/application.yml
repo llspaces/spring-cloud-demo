@@ -12,7 +12,8 @@ spring:
 mybatis:
   type-aliases-package: com.lyp.userservice1.pojo
 logging:
-  level.com.lyp.demo: debug
+  level:
+    com.lyp.demo: debug
 eureka:
   client:
     service-url:
